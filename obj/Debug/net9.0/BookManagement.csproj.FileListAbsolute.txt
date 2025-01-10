@@ -1,0 +1,14 @@
+C:\Users\duong\Source\Repos\BookManagement\bin\Debug\net9.0\BookManagement.exe
+C:\Users\duong\Source\Repos\BookManagement\bin\Debug\net9.0\BookManagement.deps.json
+C:\Users\duong\Source\Repos\BookManagement\bin\Debug\net9.0\BookManagement.runtimeconfig.json
+C:\Users\duong\Source\Repos\BookManagement\bin\Debug\net9.0\BookManagement.dll
+C:\Users\duong\Source\Repos\BookManagement\bin\Debug\net9.0\BookManagement.pdb
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\BookManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\BookManagement.AssemblyInfoInputs.cache
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\BookManagement.AssemblyInfo.cs
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\BookManagement.csproj.CoreCompileInputs.cache
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\BookManagement.dll
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\refint\BookManagement.dll
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\BookManagement.pdb
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\BookManagement.genruntimeconfig.cache
+C:\Users\duong\Source\Repos\BookManagement\obj\Debug\net9.0\ref\BookManagement.dll
