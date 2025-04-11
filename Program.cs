@@ -2,7 +2,6 @@
 {
     using BookMan.Controllers;
     using System;
-    using static BookManagement.Controllers.BookControllers;
 
     internal class Program
     {
@@ -12,59 +11,46 @@
 
             while (true)
             {
-                Console.WriteLine("\nBook Manager");
-                Console.WriteLine("1. View all books");
-                Console.WriteLine("2. View a single book");
-                Console.WriteLine("3. Delete a book");
-                Console.WriteLine("4. Search books");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine(@"
+Book Manager
+1. View all books
+2. View a single book
+3. Delete a book
+4. Search books
+5. Exit");
                 Console.Write("Enter your choice: ");
 
-                if (int.TryParse(Console.ReadLine(), out int choice))
-                {
-                    switch (choice)
-                    {
-                        case 1:
-                            controller.List();
-                            break;
-                        case 2:
-                            Console.Write("Enter book ID: ");
-                            if (int.TryParse(Console.ReadLine(), out int id))
-                            {
-                                controller.Single(id);
-                            }
-                            else
-                            {
-                                Console.WriteLine("Invalid ID.");
-                            }
-                            break;
-                        case 3:
-                            Console.Write("Enter book ID: ");
-                            if (int.TryParse(Console.ReadLine(), out int deleteId))
-                            {
-                                controller.Delete(deleteId);
-                            }
-                            else
-                            {
-                                Console.WriteLine("Invalid ID.");
-                            }
-                            break;
-                        case 4:
-                            Console.Write("Enter keyword to search: ");
-                            string keyword = Console.ReadLine();
-                            controller.Search(keyword);
-                            break;
-                        case 5:
-                            Console.WriteLine("Goodbye!");
-                            return;
-                        default:
-                            Console.WriteLine("Invalid choice.");
-                            break;
-                    }
-                }
-                else
+                if (!int.TryParse(Console.ReadLine(), out int choice))
                 {
                     Console.WriteLine("Invalid input. Please enter a number.");
+                    continue;
+                }
+
+                switch (choice)
+                {
+                    case 1:
+                        controller.List();
+                        break;
+                    case 2:
+                    case 3:
+                        Console.Write("Enter book ID: ");
+                        if (int.TryParse(Console.ReadLine(), out int id))
+                        {
+                            if (choice == 2) controller.Single(id);
+                            else controller.Delete(id);
+                        }
+                        else Console.WriteLine("Invalid ID.");
+                        break;
+                    case 4:
+                        Console.Write("Enter keyword to search: ");
+                        controller.Search(Console.ReadLine());
+                        break;
+                    case 5:
+                        Console.WriteLine("Goodbye!");
+                        return;
+                    default:
+                        Console.WriteLine("Invalid choice.");
+                        break;
                 }
             }
         }
